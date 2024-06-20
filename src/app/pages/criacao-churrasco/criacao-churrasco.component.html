@@ -1,0 +1,37 @@
+<section id="section-form" class="bg-red-300 min-h[calc(100vh-400px)] p-10">
+  <!-- on idle, timer, viewport, interaction, hover, immediate, prefetch -->
+  @defer(on interaction(trigger)) 
+  {
+    <app-preco-formulario/>
+  } @placeholder {
+    <figure>
+      <img #trigger class="img-capa" src="../../../assets/logo.jpg" alt="Logomarca do churrascometro">
+      <p>Tenha uma nova experiência em calcular Churrascos</p>
+    </figure>
+    
+  } @loading {
+    <p>Loading ...</p>
+  } @error {
+    <p>Erro ao carregar componente</p>
+  }
+
+  <!-- @defer(when condition) 
+  {
+    <app-preco-formulario/>
+  } @placeholder(minimum 1000ms) {
+    <p #trigger>Mostrar antes do carregamento</p>
+  } @loading(after 150ms; minimum 1000ms) {
+    <p>Loading ...</p>
+  } @error {
+    <p>Erro ao carregar componente</p>
+  } -->
+  
+</section>
+
+<section id="section-end">
+  <div class="flex justify-end">
+    <button mat-flat-button (click)="rolarToSection('header')">
+      Rolar para o topo!
+    </button>
+  </div>
+</section>

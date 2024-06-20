@@ -1,0 +1,29 @@
+
+<div class="table-container">
+
+    <div class="flex justify-between items-center">
+        <h1 class="inline-flex text-2xl font-bold mb-4">Lista de {{produto | titlecase}}</h1>
+        <button title='Adiciona {{ produto | titlecase }}' mat-flat-button color="primary" (click) = "navegarParaCriacao()">+</button>
+    </div>
+    @if (items.length > 0) {
+      <table><thead>
+          <tr><td>ID</td><td>Nome</td><td>Preço por {{ produto ==='carnes' ? "kg" : "Unidade"}}</td></tr>
+      </thead>
+
+      <tbody>
+        @for(item of items; track item.id) {
+          <tr class="cursor-pointer" (dblclick)="navegarParaEdicao(item.id)" 
+              title="Dê duplo-click para editar o produto: {{item.nome}}">
+          <td>{{ item.id }}</td>
+          <td>{{ item.nome }}</td>
+         <td>{{ item.preco_kg ? (item.preco_kg | currency : "BRL") : (item.preco_unidade | currency : "BRL")}}</td>
+          </tr>
+        }
+      </tbody>
+      </table>
+    }
+
+  </div>
+
+
+

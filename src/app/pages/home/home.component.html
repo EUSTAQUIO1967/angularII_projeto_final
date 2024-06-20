@@ -1,0 +1,20 @@
+<section id="section-start">
+  <div class="text-center">
+    <h1 class="my-6 text-3xl font-bold">{{ welcomeMessage }}</h1>
+
+    @if(loginService.isLoggedIn()) {
+            <button mat-raised-button color="primary" class="button-start mb-6" routerLink="../churrascos/novo">
+      Vamos começar!
+    </button>
+    } @else {
+      
+      <h2>Saiba quanto será o investimento para o seu churrasco em poucos cliques ... </h2>
+      
+      
+
+      <h2>Faça Login para providenciar o seu churrasco !!!</h2>
+
+    }
+
+  </div>
+</section>

@@ -1,0 +1,32 @@
+table-container {
+  display:flex;
+  justify-content: center ;
+  align-items: center;
+  width: 100%;
+  max-width: 800px;
+  margin: 50px auto;
+
+}
+
+
+table {
+  width: 100%;
+  border-collapse: collapse;
+  margin: 2rem;
+  margin-right: 2rem;
+}
+
+
+th,
+td {
+
+  padding: 10px;
+  border: 1px solid #ddd;
+  text-align: left;
+}
+
+ 
+
+th {
+  background-color: #f4f4f4;
+}
